@@ -19,6 +19,7 @@ def checkValid(grid,num,pos):
             return False
     x_box=pos[0]//3
     y_box=pos[1]//3
+    #check box
     for i in range(x_box*3,(x_box*3)+3):
         for j in range(y_box * 3, (y_box * 3) + 3):
             if grid[i][j]==num and pos!=(i,j):
@@ -38,7 +39,6 @@ def solve(grid):
                 return True
             grid[row][col] = 0
     return False
-
 
 
 def print_puzzle(grid):
